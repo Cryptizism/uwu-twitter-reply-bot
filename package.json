@@ -1,0 +1,19 @@
+{
+  "name": "twit-uwuify",
+  "version": "0.0.1",
+  "description": "UwUifies a given users tweets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "uwu"
+  ],
+  "author": "Cryptizism",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^15.0.0",
+    "twit": "^2.2.11",
+    "uwuifier": "^4.0.4"
+  }
+}
