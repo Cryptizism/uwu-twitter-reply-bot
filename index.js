@@ -3,7 +3,7 @@ const Uwuifier = require('uwuifier');
 const config = require('./config.json');
 let track = config.track;
 
-console.log(track);
+//console.log(`Tracking the following IDs:\n${track}`);
 
 var T = new Twit({
   consumer_key:         'hb2MHqthzb0noakYX8PTv6kJB',
