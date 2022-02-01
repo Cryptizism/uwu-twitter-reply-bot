@@ -6,10 +6,10 @@ let track = config.track;
 //console.log(`Tracking the following IDs:\n${track}`);
 
 var T = new Twit({
-  consumer_key:         'hb2MHqthzb0noakYX8PTv6kJB',
-  consumer_secret:      'sPdLgS1iSVlkU8CAmRKVMK1af6eKW71FsxMd5HtdCI5A4NpyuO',
-  access_token:         '1382813603867295746-wHFsvr0Qnaic9qJkaj2RtfkUJDXwdh',
-  access_token_secret:  '8wuDO2ATZhtmJUTDvLMecQGR7raUD0SXtK8EqxDqnAchd',
+  consumer_key:         process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret:      process.env.TWITTER_CONSUMER_SECRET,
+  access_token:         process.env.TWITTER_ACCESS_TOKEN,
+  access_token_secret:  process.env.TWITTER_ACCESS_TOKEN_SECRET,
   timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
   strictSSL:            true,     // optional - requires SSL certificates to be valid.
 })
