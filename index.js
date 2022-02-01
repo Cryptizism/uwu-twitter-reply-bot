@@ -20,7 +20,7 @@ const uwuify = new Uwuifier({
       actions: 0.004,
       stutters: 0.1,
     },
-    words: 0.5,
+    words: 0.8,
     exclamations: 0.5,
   });
 
@@ -36,6 +36,7 @@ stream.on('tweet', function (tweet) {
     //console.log(`In respond to tweet ID  \n ${tweet.id_str}`);
     var tweetText = tweet.text.replace(/\B@\w+/g, '');
     //console.log(`Original tweet:\n ${tweetText}`);
+    if(tweetText.match(/(\w+)/g).length < 3){ /*console.error(`Tweet is too short. Would result in bad results`);*/ return; }
     var uwu = uwuify.uwuifySentence(tweetText)
     //console.log(`UWU tweet: \n${tweetText}`);
     var tweetId = tweet.id_str;
