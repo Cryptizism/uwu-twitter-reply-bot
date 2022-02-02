@@ -1,6 +1,7 @@
 var Twit = require('twit')
 const Uwuifier = require('uwuifier');
 const config = require('./config.json');
+require('dotenv').config();
 let track = config.track;
 
 //console.log(`Tracking the following IDs:\n${track}`);
