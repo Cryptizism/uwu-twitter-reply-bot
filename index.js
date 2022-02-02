@@ -42,6 +42,7 @@ stream.on('tweet', function (tweet) {
     //console.log(`UWU tweet: \n${tweetText}`);
     var tweetId = tweet.id_str;
     //console.log(tweetId);
+    try{
     T.post('statuses/update',
         {
             in_reply_to_status_id: tweet.id_str,
@@ -54,6 +55,10 @@ stream.on('tweet', function (tweet) {
             console.log(`Successfully tweeted: \n${data.text}`);
         }
     })
+    } catch (err){
+      //Deleted tweet or can't access
+      //console.error(err)
+    }
   }
 });
 
